@@ -1,8 +1,8 @@
 <template>
   <div id="dettagli">
-    <h2>Film</h2>
-    <h2>{{ details.title }}</h2>
-    <h3>{{ details.original_title }}</h3>
+      <h2>Serie</h2>
+    <h2>{{ details.name }}</h2>
+    <h3>{{ details.original_name }}</h3>
     <span><img :src="bandieraImmagini()" /></span>
     <br />
     <span>{{ details.vote_average }}</span>
@@ -14,7 +14,7 @@
 
 
 export default {
-  name: 'CardFilm',
+  name: 'CardSerie',
   props: {
       details:Object,
   },
@@ -33,4 +33,7 @@ export default {
 </script>
 
 <style lang="scss">
+#dettagli{
+    border: 2px solid black;
+}
 </style>
