@@ -6,6 +6,7 @@
     <span><img :src="bandieraImmagini()" /></span>
     <br />
     <span>{{ details.vote_average }}</span>
+    <img :src="importaImmagini()" :alt="details.original_title">
   </div>
 </template>
 
@@ -27,6 +28,13 @@ export default {
       }else if(this.details.original_language === 'es'){
         return "https://th.bing.com/th/id/R.c5d09f69c2b8c99438e176963abbdecb?rik=VMtAUlZ9%2bXaBvg&riu=http%3a%2f%2fwww.dsalenia.it%2fimages%2fflag_spanish.gif&ehk=5Ezc4PsSThB1njE2MDMbZIwCKiIDKn4YwL0Xo7EJNZc%3d&risl=&pid=ImgRaw&r=0"
       }else "not-found"
+    }
+  },
+  importaImmagini(){
+    if(this.details.poster_path !== null){
+      return `https://image.tmdb.org/t/p/w342${this.details.poster_path}`
+    }else if (this.details.poster_path === null){
+      return `https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1`
     }
   }
 }
