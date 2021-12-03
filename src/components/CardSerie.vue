@@ -8,7 +8,7 @@
     <br />
     <star-rating :rating="votoArrotondato()" v-bind:star-size="30">
     </star-rating>
-
+    <h2>{{ details.overview }}</h2>
   </div>
     <div id="immagini">
       <img :src="importaImmagini()" :alt="details.original_title" />
@@ -61,6 +61,7 @@ export default {
   height: 521px;
   display: block;
   margin: 20px;
+  overflow-y: hidden;
  
 }
 #dettagli {

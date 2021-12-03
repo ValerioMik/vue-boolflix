@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       apiUrl:
-        "https://api.themoviedb.org/3/search/movie?api_key=c766fe019c512e0736766f4ff20690b2&query=",
+        "https://api.themoviedb.org/3/search/movie?api_key=c766fe019c512e0736766f4ff20690b2&language=it_IT&query=",
       apiUrlSerie:
         "https://api.themoviedb.org/3/search/tv?api_key=c766fe019c512e0736766f4ff20690b2&language=it_IT&query=",
       listadeiFilm: [],
