@@ -5,15 +5,25 @@
     <h3>{{ details.original_name }}</h3>
     <span><img :src="bandieraImmagini()" /></span>
     <br />
+    <star-rating :rating="votoArrotondato()" 
+    star-size="30" 
+    increment="0.5" 
+    :show-rating="false">
+    </star-rating>
     <img :src="importaImmagini()" :alt="details.original_title">
-    <span>{{ details.vote_average }}</span>
   </div>
 </template>
 
 
 <script>
+import StarRating from 'vue-star-rating'
+
+
 export default {
   name: "CardSerie",
+  components: {
+   StarRating,
+  },
   props: {
     details: Object,
   },
@@ -28,11 +38,14 @@ export default {
       } else "not-found";
     },
     importaImmagini(){
-      if(this.details.detposter_path !== null){
+      if(this.details.poster_path !== null){
         return `https://image.tmdb.org/t/p/w342${this.details.poster_path}`
       }else if (this.details.poster_path === null){
         return `https://th.bing.com/th/id/R.eab98c7b1c8fe293ab4e1ecfe30cba4b?rik=Zr9x5Ys05B1Skw&pid=ImgRaw&r=0&sres=1&sresct=1`
       }
+    },
+    votoArrotondato(){
+       return (this.details.vote_average / 2)
     }
   },
 };

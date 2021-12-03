@@ -7,10 +7,11 @@
 <script>
 import ImputUtente from './components/ImputUtente.vue'
 
+
 export default {
   name: 'App',
   components: {
-   ImputUtente
+   ImputUtente,
   }
 }
 </script>
