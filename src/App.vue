@@ -4,33 +4,30 @@
       <div id="logoapp">
         <h1>Booflix</h1>
       </div>
-       <ImputUtente class="imput"/>
+      <ImputUtente class="imput" />
     </header>
-    
-    
   </div>
 </template>
 
 <script>
-import ImputUtente from './components/ImputUtente.vue'
-
+import ImputUtente from "./components/ImputUtente.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-   ImputUtente,
-  }
-}
+    ImputUtente,
+  },
+};
 </script>
 
 <style lang="scss">
 #app {
 }
-header{
+header {
   background-color: black;
-   position: relative;
+  position: relative;
 }
-h1{
+h1 {
   color: red;
   font-size: 50px;
 }

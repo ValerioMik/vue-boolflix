@@ -1,4 +1,5 @@
 <template>
+<div>
   <div id="dettagli">
     <h2>Serie</h2>
     <h2>{{ details.name }}</h2>
@@ -8,11 +9,11 @@
     <star-rating :rating="votoArrotondato()" v-bind:star-size="30">
     </star-rating>
 
+  </div>
     <div id="immagini">
       <img :src="importaImmagini()" :alt="details.original_title" />
     </div>
-    
-  </div>
+</div>
 </template>
 
 
@@ -42,7 +43,7 @@ export default {
         return `https://image.tmdb.org/t/p/w342${this.details.poster_path}`;
       }
 
-      return `https://www.losbagliato.it/wp-content/uploads/2021/07/copertina-netflix-23-giugno-960x960.png`;
+      return `404`;
     },
     votoArrotondato() {
       return this.details.vote_average / 2;
@@ -52,13 +53,15 @@ export default {
 </script>
 
 <style lang="scss">
-#dettagli:hover {
+:hover>#dettagli {
   border: 2px solid rgb(255, 255, 255);
   background-color: black;
   cursor: pointer;
-  width: 100%;
+  width: 342px;
+  height: 521px;
   display: block;
   margin: 20px;
+ 
 }
 #dettagli {
   display: none;
@@ -69,5 +72,8 @@ h3 {
 }
 #immagini {
   margin: 20px;
+  width: 342px;
+  border: 2px solid rgb(255, 255, 255);
+
 }
 </style>

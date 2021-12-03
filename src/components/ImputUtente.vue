@@ -74,15 +74,14 @@ export default {
 .imput {
   background-color: grey;
   margin: 0 auto;
-  
 }
-#inmputcliente{
+#inmputcliente {
   float: right;
   position: absolute;
   left: 1240px;
   top: 30px;
 }
-.card{
+.card {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

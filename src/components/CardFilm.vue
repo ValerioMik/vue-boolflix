@@ -44,7 +44,7 @@ export default {
         return `https://image.tmdb.org/t/p/w342${this.details.poster_path}`;
       }
       console.log("niente");
-      return `https://www.losbagliato.it/wp-content/uploads/2021/07/copertina-netflix-23-giugno-960x960.png`;
+      return `404`;
     },
     votoArrotondato() {
       return this.details.vote_average / 2;
@@ -54,25 +54,29 @@ export default {
 </script>
 
 <style lang="scss">
-a:hover >#dettagli {
+:hover > #dettagli {
   border: 2px solid rgb(255, 255, 255);
   background-color: black;
   cursor: pointer;
-  width: 100%;
+  height: 521px;
+  width: 342px;
   display: block;
   margin: 20px;
 }
 #dettagli {
   display: none;
+
 }
-h2,h3{
+h2,
+h3 {
   color: white;
 }
-#immagini{
+#immagini {
   margin: 20px;
   border: 2px solid rgb(255, 255, 255);
- 
+  width: 342px;
 }
-
-
+:hover >#immagini{
+display: none;
+}
 </style>
